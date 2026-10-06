@@ -1,0 +1,28 @@
+column,dtype,source_file,description,derivation
+plot_id,object,crop_yield_train.csv,Unique plot identifier,canonical/raw value
+region,object,crop_yield_train.csv,Canonical Ethiopian region label,canonical/raw value
+crop_type,object,crop_yield_train.csv,Canonical crop label,canonical/raw value
+survey_year,int64,crop_yield_train.csv,Survey/season year,canonical/raw value
+planting_month,object,crop_yield_train.csv,Planting month,canonical/raw value
+altitude_m,float64,crop_yield_train.csv,Elevation in meters,canonical/raw value
+rainfall_mm_season,float64,crop_yield_train.csv,Plot-reported seasonal rainfall (mm),canonical/raw value
+farm_size_ha,float64,crop_yield_train.csv,Farm size in hectares,canonical/raw value
+fertilizer_kg_per_ha,float64,crop_yield_train.csv,Fertilizer applied per hectare after train-fitted cap,canonical/raw value
+improved_seed_used,int64,crop_yield_train.csv,Improved seed indicator,canonical/raw value
+pest_disease_flag,float64,crop_yield_train.csv,Pest/disease pressure indicator; sentinel treated as missing,canonical/raw value
+soil_quality_index,float64,crop_yield_train.csv,Soil quality index 0–1,canonical/raw value
+labor_days_per_ha,float64,crop_yield_train.csv,Labor days per hectare; sentinel treated as missing,canonical/raw value
+distance_to_market_km,float64,crop_yield_train.csv,Distance to nearest market in km,canonical/raw value
+yield_tons_per_ha,float64,crop_yield_train.csv,Target yield in tons/ha (train only),canonical/raw value
+season_mean_temp,float64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+season_rainfall_mm,float64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+season_extreme_heat_days,float64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+weather_months_observed,int64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+season_temp_std,float64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+season_rainfall_std,float64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+planting_month_num,int64,derived,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+fertilizer_seed_interaction,float64,derived,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+rainfall_reporting_ratio,float64,derived,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+temp_rainfall_interaction,float64,derived,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+season_temp_anomaly,float64,regional_weather.csv,Engineered feature described in reports/feature_engineering_table.csv,see feature engineering table
+price_birr_per_quintal,float64,market_prices.csv,Cleaned market price for analysis/demo; excluded from model,cleaned/joined
